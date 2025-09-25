@@ -13,6 +13,8 @@ The `__repr__` special method uses *f-string* notation `!r` to get the standard 
 
 > In contrast, `__str__` is called by str() built-in and implicitly used by the print function. It should return a string suitable for dislay to end users.
 
+In Python f-strings, the !r conversion flag forces the representation of an object using its repr() method, and the !s conversion flag forces the representation using its str() method. The !a conversion flag forces the representation using its ascii() method.
+
 
 ## Questions:
 
