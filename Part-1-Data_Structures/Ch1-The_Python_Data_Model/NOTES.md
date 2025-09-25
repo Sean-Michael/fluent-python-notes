@@ -5,6 +5,14 @@ Special methods, called "dunders" can be used to leverage the Python Data Model.
 - standardized operations like `__getitem__`
 - benefit from standard library functions like `random.choice`
 
+Infix operators like + `__add__` and * `__mul__` create new objects and do not touch ther operands. In example 1.2 [[vector2d.py]] the addition and multiplication return a new `Vector` object that is the result of the operation. They do not actually modify the original `self`. 
+
+The `__repr__` special method uses *f-string* notation `!r` to get the standard representation of the value so that we have `Vector(1, 2)` rather than `Vector('1', '2')`. 
+
+> The string returned by `__repr__` should be unambiguous and, if possible, match the source code necessary to re-create the represented object. 
+
+> In contrast, `__str__` is called by str() built-in and implicitly used by the print function. It should return a string suitable for dislay to end users.
+
 
 ## Questions:
 
